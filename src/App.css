@@ -155,9 +155,16 @@ form button {
   main, header{
     flex-direction: column;
   }
+  
+  form, nav, main {
+    width: 90%;
+  }
+
+  .music-container, .content {
+    width: 100%;
+  }
 
   .music-container {
-    width: 90%;
-    
+    margin-top: 2em;
   }
 }

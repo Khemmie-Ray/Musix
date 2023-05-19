@@ -7,7 +7,7 @@ const Home = () => {
         <header>
         <Link to="/" className="logo">Musix</Link>
         <nav>
-          <Link>Contact Us</Link>
+          <Link c>Contact Us</Link>
           <Link to="SignUp" className="signup">Sign Up</Link>
         </nav>
       </header>
