@@ -10,11 +10,40 @@ body {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 400;
   background-color: rgb(221, 221, 221);
+  font-size: 1rem;
 }
 
 /* ======== Typography ======== */
 a {
   text-decoration: none;
+  font-weight: 700;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.title, .music-card p,
+.content a {
+  text-transform: capitalize;
+}
+
+.title {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.music-card p {
+  margin-top: 0;
+}
+
+.content p{
+  margin-bottom: 2em;
 }
 
 /* ======== Layout ======== */
@@ -23,14 +52,22 @@ header, main {
   margin: 1em auto;
 }
 
+main {
+  width: 70%;
+}
+
 header, main, 
-.music-card {
+.music-card, nav {
   display: flex;
   justify-content: space-between;
 }
 
-.music-card, header {
+.music-card, header, nav {
   align-items: center;
+}
+
+nav {
+  width: 20%;
 }
 
 header {
@@ -40,9 +77,87 @@ header {
 }
 
 .music-card {
+  border-bottom: 1px solid white;
+  padding: .9em 0;
+}
+
+.music-container {
+  width: 40%;
+  padding: 1em;
   background-color: gray;
+  border-radius: 10px;
+}
+
+.signup {
+  background-color: rgb(223, 98, 52);
+  padding: .5em 1.2em;
+  border-radius: 8px;
+  color: white;
+}
+
+.content {
+  margin-top: 3em;
+}
+
+button, .content a {
+  background-color: rgb(223, 98, 52);
+  padding: .8em;
+  font-size: 1.2rem;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+}
+
+button:hover, button:focus {
+  background-color: white;
+  color: gray;
+}
+
+.signup:hover,
+button:focus, .signup:focus,
+.content a:hover,
+.content a:focus,
+.submit:hover, .submit:focus {
+  background-color: gray;
+} 
+
+.submit:hover, .submit:focus {
+  color: white;
+}
+
+form {
+  background-color: white;
+  width: 30%;
+  margin: 2em auto;
+  padding: 1.2em;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 1em;
+  margin-bottom: .9em;
+}
+
+form button {
+  padding: .5em;
+  width: 30%;
 }
 
 
-
 /* ======== Media Query ======== */
+@media (max-width: 600px) {
+  main, header{
+    flex-direction: column;
+  }
+
+  .music-container {
+    width: 90%;
+    
+  }
+}

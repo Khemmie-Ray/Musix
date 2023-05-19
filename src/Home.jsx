@@ -8,16 +8,18 @@ const Home = () => {
         <Link to="/" className="logo">Musix</Link>
         <nav>
           <Link>Contact Us</Link>
-          <Link to="SignUp">Sign Up</Link>
+          <Link to="SignUp" className="signup">Sign Up</Link>
         </nav>
       </header>
       <main>
-        <div>
-          <h1>Let makes this more interesting</h1>
+        <div className="content">
+          <h1>Let makes this more interesting!</h1>
           <p>Create your own custom playlist</p>
-          <button>create playlist</button>
+          <Link to="/signup">create playlist.</Link>
         </div>
+        <div className="music-container">
         <TrendingMusic />
+        </div>
       </main>
       <footer>
         <p>&copy; Musix 2023</p>

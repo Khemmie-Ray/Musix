@@ -11,10 +11,12 @@ const TrendingMusic = () => {
   return (
     <div>
         {musicData.map(data => (
-        <div key={data.id} className="music-container">
+        <div key={data.id}>
             <div className="music-card">
-                <h2>{data.songTitle}</h2>
+                <div>
+                <h2 className="title">{data.songTitle}</h2>
                 <p>{data.artist}</p>
+                </div>
                 <button onClick={() => {
                     setModalData(data)
                     setShowPlayer(!showPlayer)
